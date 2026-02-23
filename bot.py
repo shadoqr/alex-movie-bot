@@ -4,7 +4,7 @@ from pymongo import MongoClient
 import os
 
 TOKEN = os.environ.get("7992693219:AAFyz11hi_DC8ro4vuIcgYmiDXu2gL91I6Q")
-OMDB_KEY = os.environ.get("cluster0")
+OMDB_KEY = os.environ.get("43bad0e0")
 MONGO_URI = os.environ.get("mongodb+srv://Alexdb123:Alexdb123@cluster0.yzprwyx.mongodb.net/?appName=Cluster0")
 
 bot = telebot.TeleBot(TOKEN)
