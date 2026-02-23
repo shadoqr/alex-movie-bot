@@ -1,0 +1,18 @@
+# ===== AUTO ADD DB CHANNEL POSTS =====
+DB_CHANNEL = "+WAzCdjQjNwkzNmI9"
+
+@bot.channel_post_handler(func=lambda m: True)
+def channel_post_handler(message):
+    try:
+        if message.text:
+            # Take first line as movie name
+            name = message.text.split('\n')[0].lower()
+            link = f"https://t.me/{DB_CHANNEL}/{message.message_id}"
+
+            # Check if movie already exists
+            if not collection.find_one({"name": name}):
+                collection.insert_one({"name": name, "link": link})
+                print(f"✅ Added movie: {name}")
+
+    except Exception as e:
+        print(f"Error adding movie: {e}")
