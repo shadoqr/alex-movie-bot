@@ -3,9 +3,9 @@ import requests
 from pymongo import MongoClient
 import os
 
-TOKEN = os.environ.get("7992693219:AAFyz11hi_DC8ro4vuIcgYmiDXu2gL91I6Q")
-OMDB_KEY = os.environ.get("43bad0e0")
-MONGO_URI = os.environ.get("mongodb+srv://Alexdb123:Alexdb123@cluster0.yzprwyx.mongodb.net/?appName=Cluster0")
+TOKEN = os.environ.get("BOT_TOKEN")
+OMDB_KEY = os.environ.get("OMDB_KEY")
+MONGO_URI = os.environ.get("MONGO_URI")
 
 bot = telebot.TeleBot(TOKEN)
 
